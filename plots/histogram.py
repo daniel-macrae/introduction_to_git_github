@@ -54,5 +54,8 @@ if __name__ == "__main__":
         plt.ylabel('Frequency')
         plt.tight_layout()
         path =  f"hist_value_category_{cat}.png"
+        plt.savefig(path)
         plt.close()
+        print(f"Saved histogram for category '{cat}': {path}")
+
         
