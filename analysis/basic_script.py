@@ -6,6 +6,21 @@ def load_data():
     return df
 
 
+
+def compute_mean_and_std(df, column):
+    mean = df[column].mean()
+    std = df[column].std()
+    return mean, std
+
+
 if __name__ == "__main__":
     data = load_data()
-    print(data.head())
+    print("Data loaded successfully.")
+
+    columns_of_interest = ['value', 'category']
+
+    for column in columns_of_interest:
+        mean, std = compute_mean_and_std(data, column)
+        print(f"Mean: {mean}, Std: {std}")
+
+    
