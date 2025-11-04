@@ -45,4 +45,14 @@ if __name__ == "__main__":
     print(f"Saved overall histogram: {overall_path}")
 
     
-
+    # Distribution per category
+    for cat, group in df.groupby('category'):
+        plt.figure(figsize=(8, 6))
+        plt.hist(group['value'], bins=30, color='C1', edgecolor='black')
+        plt.title(f'Distribution of value — category: {cat}')
+        plt.xlabel('value')
+        plt.ylabel('Frequency')
+        plt.tight_layout()
+        path =  f"hist_value_category_{cat}.png"
+        plt.close()
+        
