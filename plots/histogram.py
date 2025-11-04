@@ -28,3 +28,17 @@ if __name__ == "__main__":
     df['value'] = pd.to_numeric(df['value'], errors='coerce')  # ensure numeric
     df = df.dropna(subset=['value', 'category'])
 
+    
+
+    # Output directory for plots
+
+    # Overall distribution
+    plt.figure(figsize=(8, 6))
+    plt.hist(df['value'], bins=30, color='C0', edgecolor='black')
+    plt.title('Distribution of value (overall)')
+    plt.xlabel('value')
+    plt.ylabel('Frequency')
+    plt.tight_layout()
+    overall_path =  'hist_value_overall.png'
+    
+
