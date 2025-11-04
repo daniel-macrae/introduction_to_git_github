@@ -17,6 +17,9 @@ def compute_mean_and_std(df, column):
     return mean, std
 
 
+
+# THIS IS A SCRIPT TO PERFORM BASIC DATA ANALYSIS
+
 if __name__ == "__main__":
     data = load_data()
     print("Data loaded successfully.")
