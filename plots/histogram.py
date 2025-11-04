@@ -40,5 +40,9 @@ if __name__ == "__main__":
     plt.ylabel('Frequency')
     plt.tight_layout()
     overall_path =  'hist_value_overall.png'
+    plt.savefig(overall_path)
+    plt.close()
+    print(f"Saved overall histogram: {overall_path}")
+
     
 
