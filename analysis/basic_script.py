@@ -1,7 +1,7 @@
 import pandas as pd
 
 def load_data():
-    file_path = 'data/sample_data.csv'
+    file_path = 'C:\\Users\\MacRaeDC\\OneDrive - UMCG\\Documenten\\introduction_to_git_github\\data\\data.csv'
     df = pd.read_csv(file_path)
     return df
 
